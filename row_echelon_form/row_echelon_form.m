@@ -47,5 +47,6 @@ else
         end;
     end;
 end;
+fprintf("Answer :\n");
 disp(A);
 
