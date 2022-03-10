@@ -8,3 +8,5 @@ Although matlab itself has ready-made functions, it is written for people who wa
  - Now all you have to do is type "row_echelon_form" in the command window.
 Then write any matrix and see the result.
  <img src="./images/answer.png">
+
+ ## Note : Partial Pivoting applied.
