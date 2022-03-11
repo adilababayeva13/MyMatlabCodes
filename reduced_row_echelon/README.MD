@@ -1,4 +1,4 @@
-# FIND REDUCED ROW ECHELON FORM OF MATRIX 
+# FIND REDUCED ROW ECHELON FORM OF MATRIX (and row echelon form)
 
 Although matlab itself has ready-made functions, it is written for people who want to understand logic or just do the homework given by the teacher like me.
 
