@@ -12,6 +12,7 @@ if col<=2
     return;
 end;
 B=A(:,1:col-1);
+disp(B);
 [maxValue, linearIndexesOfMaxes] = max(B(:));
 [rowsOfMaxes colsOfMaxes] = find(B == maxValue);
 colOfMax=colsOfMaxes(1);
@@ -19,12 +20,9 @@ if colOfMax~=1
     v = A(:, 1);
     A(:, 1) = A(:,colOfMax );
     A(:, colOfMax) = v;
-    fprintf("1.column and %d. column swaped. \n",colOfMax);
-    disp(A);
+    fprintf("This matrix does not fit any equation. Maybe you forgot to write the arguments. \n");
 end;
-A = sortrows(A,'descend');
-fprintf("Rows of the matrix are sorted by descending order\n");
-disp(A);
+A = sortrows(A);
 i=1;k=1;
 while A(i,1)==0
   row=A(i+1,:);
