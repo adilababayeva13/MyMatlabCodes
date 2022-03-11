@@ -48,12 +48,11 @@ else
     end;
 end;
 if col==1
-    fprintf("Answer :\n ");
+    fprintf("Answer : ");
     disp(A);
     return;
 end;
-fprintf("Row Echelon Form : \n");
- disp(A);
+
 for l=2:n
         s=l;
         y=A(l,l);
@@ -61,9 +60,9 @@ for l=2:n
             y=A(l,s+1);
             s=s+1;
         end;
-        for j=1:l-1
-          A(j,:)=A(j,:)-A(j,s)*A(l,:);
+        A(l,:)=A(l,:)./y;
+        for j=l+1:n
+            x=A(j,l);
+            A(j,:)=A(j,:)-A(l,:)*x;
         end;
- end;
- fprintf("Reduced Row Echelon Form : \n");
- disp(A);
+    end;
