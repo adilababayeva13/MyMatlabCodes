@@ -7,7 +7,7 @@ if n==1
     return;
 end;
 col=size(A,2);
-A = sortrows(A);
+A = sortrows(A,'descend');
 i=1;k=1;
 while A(i,1)==0
   row=A(i+1,:);
