@@ -85,3 +85,27 @@ for l=2:n
  fprintf("Reduced Row Echelon Form : \n");
  disp(A);
  
+ % Check the solution of the system
+ check_sol = true;
+ for q=1:n
+     t=1;
+     if A(q,col)~=0
+         while (A(q,t)==0)&&(t<col)
+             if t==col-1
+                 disp("System has no solution.");
+                 ckeck_sol=false;
+                 break;
+             end;
+             
+             
+             t=t+1;
+         end;
+     end;
+ end;
+if check_sol 
+  if col-n>1
+      disp("The system has entire solution.");
+  else
+    disp("The system has unique solution.");
+  end;
+end;
