@@ -18,15 +18,9 @@ end;
 iteration = input("Enter the number of iteration : ");
 x=zeros(1,col-1);
   
-fprintf("iter  ");
-for s=1:col-1
-    fprintf("    x%d    ",s);
-end;
-fprintf("\n");
+fprintf("iter ");
+for s=1:
 for i=1:iteration
-       fprintf(" %d  |",i);
-       fprintf(" %f  |",x);
-       fprintf("\n");
     for j=1:col-1
         sum=0;
         for k=1:col-1
@@ -42,5 +36,7 @@ for i=1:iteration
          
         end;  
     end;    
-
+   fprintf("%d . ",i);
+   fprintf("%d ",x);
+   fprintf("\n");
 end;   
