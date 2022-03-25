@@ -43,19 +43,20 @@ check = 0;
 end;
 fprintf("Diagonally dominant form :\n");
 disp(A);
-iteration = input("Enter the number of iteration : ");
+
 x=zeros(1,col-1);
-  
+y=zeros(1,col-1);
+
 fprintf("iter  ");
 for s=1:col-1
-    fprintf("    x%d    ",s);
+    fprintf("        x%d            ",s);
 end;
 fprintf("\n");
-i=1;
-for i=1:iteration
+i=1; check2=1;
+while check2~=x
      check2=x;
        fprintf(" %d  |",i);
-       fprintf(" %f  |",x);
+       fprintf(" %.15f  |",x);
        fprintf("\n");
     for j=1:col-1
         sum=0;
@@ -66,8 +67,9 @@ for i=1:iteration
             sum=sum + A(j,k)*x(k);
          end;
         
-            x(j)=(A(j,col)-sum)/A(j,j);
+            y(j)=(A(j,col)-sum)/A(j,j);
      
-    end;    
-
+    end;   
+    x=y;
+i=i+1;
 end;   
